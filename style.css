@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:linear-gradient(
+        180deg,
+        #0B1026,
+        #1A1B4B
+    );
+    overflow-x:hidden;
+    color:white;
+}
+
+/* ===================
+   OPENING
+=================== */
+
+#opening{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+#opening h1{
+    font-size:2.5rem;
+    margin-bottom:15px;
+    font-family:'Dancing Script',cursive;
+}
+
+#opening p{
+    font-size:1rem;
+    opacity:.8;
+    margin-bottom:30px;
+}
+
+#openBtn{
+    border:none;
+    padding:14px 28px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:1rem;
+    background:white;
+    color:#1A1B4B;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#openBtn:hover{
+    transform:scale(1.05);
+}
+
+/* ===================
+   LETTER
+=================== */
+
+.hidden{
+    display:none;
+}
+
+#letter{
+    position:relative;
+    padding:80px 20px;
+}
+
+.paper{
+    background:#F5EEDC;
+    color:#222;
+    max-width:850px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,.3);
+    line-height:1.8;
+}
+
+.paper h3{
+    margin-bottom:20px;
+}
+
+.signature{
+    text-align:right;
+    font-family:'Dancing Script',cursive;
+    font-size:1.8rem;
+}
+
+#closeBtn{
+
+    margin-top:40px;
+
+    border:none;
+
+    background:#1A1B4B;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    display:block;
+
+    margin-left:0;
+    margin-right:auto;
+
+    transition:.3s;
+}
+
+#closeBtn:hover{
+
+    transform:scale(1.05);
+
+}
+/* ===================
+   POLAROID
+=================== */
+
+.polaroid{
+    position:absolute;
+    width:120px;
+    border-radius:12px;
+    opacity:.25;
+    animation:float 6s ease-in-out infinite;
+    transition:.3s;
+}
+
+.polaroid:hover{
+
+    transform:scale(1.1);
+
+    opacity:.5;
+
+}
+
+.p1{
+    top:120px;
+    left:20px;
+}
+
+.p2{
+    top:180px;
+    right:20px;
+}
+
+.p3{
+    bottom:350px;
+    left:20px;
+}
+
+.p4{
+    bottom:300px;
+    right:20px;
+}
+
+.p5{
+    bottom:100px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.p6{
+    top:700px;
+    left:30px;
+}
+
+.p7{
+    top:850px;
+    right:30px;
+}
+
+.p8{
+    top:1200px;
+    left:25px;
+}
+
+.p9{
+    top:1500px;
+    right:25px;
+}
+
+.p10{
+    top:1800px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ===================
+   MUSIC BUTTON
+=================== */
+
+#musicButton{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    background:white;
+    color:#111;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+
+    z-index:999;
+}
+
+#musicButton span{
+    margin-left:8px;
+    font-size:.9rem;
+}
+
+/* ===================
+   STARS
+=================== */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:.35;
+    animation:starsBlink 4s infinite;
+}
+
+@keyframes starsBlink{
+
+    0%{
+        opacity:.25;
+    }
+
+    50%{
+        opacity:.45;
+    }
+
+    100%{
+        opacity:.25;
+    }
+
+}
+
+/* ===================
+   MOBILE
+=================== */
+
+@media(max-width:768px){
+
+    .paper{
+        padding:25px;
+    }
+
+    .polaroid{
+        width:80px;
+    }
+
+    #opening h1{
+        font-size:2rem;
+    }
+
+    #musicButton span{
+        display:none;
+    }
+}
+
+.moon{
+    position:fixed;
+
+    top:20px;
+    right:25px;
+
+    font-size:40px;
+
+    opacity:.8;
+
+    z-index:10;
+
+    animation:moonFloat 5s ease-in-out infinite;
+}
+
+@keyframes moonFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.thought{
+
+    font-style:italic;
+
+    color:#667085;
+
+    font-size:.95rem;
+
+    margin:10px 0;
+
+}
+.showLetter{
+
+    animation:fadeLetter .8s ease;
+
+}
+
+@keyframes fadeLetter{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
