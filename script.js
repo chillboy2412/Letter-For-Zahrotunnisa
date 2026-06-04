@@ -61,3 +61,14 @@ song.addEventListener("ended", () => {
         "🎵 <span>Lagu for Zahrotunnisa</span>";
 
 });
+
+closeBtn.addEventListener("click", () => {
+
+    letter.classList.add("hidden");
+
+    opening.style.display = "flex";
+
+    piano.pause();
+    piano.currentTime = 0;
+
+});
